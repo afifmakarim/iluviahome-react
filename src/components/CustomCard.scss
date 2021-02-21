@@ -1,0 +1,30 @@
+.iluvia-card .wrapper {
+    position: absolute;
+    bottom: 0;
+}
+
+.iluvia-card .desc {
+    padding-left: 5px;
+    font-size: 14px;
+    font-weight: 300
+}
+
+.iluvia-card {
+    border: #1111;
+    border-radius: 25px;
+    height: 150px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 16.67%, rgba(77, 77, 77, 0.45) 100%, rgba(77, 77, 77, 0.5) 100%), url(../assets/1.png), #C4C4C4;
+    background-size: cover;
+    padding: 15px 30px;
+}
+
+.iluvia-card:hover {
+    box-shadow: 5px 4px 10px rgba(0, 0, 0, 0.25);
+    transition: 0.300s;
+    cursor: pointer;
+}
+
+.iluvia-card .title {
+    font-size: 18px;
+    font-weight: 500
+}

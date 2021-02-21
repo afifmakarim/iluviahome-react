@@ -1,0 +1,61 @@
+$theme-colors: ("primary": #736356, "danger": teal);
+
+@font-face {
+        font-family: 'Futurab';
+        src: local('Futurab'), url("../assets/FUTURAB.TTF") format('truetype');
+}
+
+// Navbar
+.navbar-brand {
+        font-family: 'Futurab';
+        color: '#736356 !important';
+}
+
+.navbar-custom {
+        color: '#736356';
+}
+
+.navbar-custom .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-custom .navbar-toggler {
+        color: rgba(0, 0, 0, 0.5);
+        border-color: rgba(0, 0, 0, 0.1);
+}
+
+// Jumbotron
+img.banner-logo {
+        max-width: 100%;
+        height: auto;
+}
+
+.tron {
+        align-items: center;
+}
+
+.title {
+        font-weight: bold;
+}
+
+.description {
+        font-size: 18px;
+        line-height: 27px;
+        font-weight: lighter;
+        margin-top: 25px;
+        margin-bottom: 25px;
+
+}
+
+.btn {
+        border-radius: 25px !important;
+}
+
+.banner {
+        margin-bottom: 25px;
+}
+
+
+
+// import bootstrap styles at the bottom!
+@import '~bootstrap/scss/bootstrap.scss';
