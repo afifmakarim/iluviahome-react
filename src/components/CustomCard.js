@@ -1,11 +1,10 @@
 import React from 'react'
 import './CustomCard.scss'
-import bg2 from '../assets/2.png'
 
-const CustomCard = ({title, desc, url}) => {
+const CustomCard = ({title, desc, url, bg}) => {
     return (
         <div className="iluvia-card" href={url}>
-            {/* <img src={bg2} className="image"></img> */}
+            <img src={bg} className="overlay-image"></img>
             <div className="wrapper">
                 <div className="title">{title}</div>
                 <div className="desc">
@@ -14,10 +13,6 @@ const CustomCard = ({title, desc, url}) => {
             </div>
         </div>
     )
-}
-
-const cardStyle = {
-    background: "linear-gradient(180deg, rgba(255, 255, 255, 0) 16.67%, rgba(77, 77, 77, 0.45) 100%, rgba(77, 77, 77, 0.5) 100%), url(../assets/1.png), #C4C4C4"
 }
 
 export default CustomCard

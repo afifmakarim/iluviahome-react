@@ -44,7 +44,6 @@ img.banner-logo {
         font-weight: lighter;
         margin-top: 25px;
         margin-bottom: 25px;
-
 }
 
 .btn {
@@ -55,7 +54,16 @@ img.banner-logo {
         margin-bottom: 25px;
 }
 
+.featured-card {
+        width: 100%;
+        height: 330px;
+}
 
+@media only screen and (max-width: 600px) {
+        .banner-logo {
+          display: none;
+        }
+}
 
 // import bootstrap styles at the bottom!
 @import '~bootstrap/scss/bootstrap.scss';
