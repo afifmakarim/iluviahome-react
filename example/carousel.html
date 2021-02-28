@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css">
+    </head>
+    
+    <body>
+    <div class="card">
+        <img class="profile" src="https://tailwindcss.com/_next/static/media/madeline-campbell.9611e07a9b970083af13390783617d41.jpg" alt="" width="50px" height="50px"/>
+        <div class="wrapper">
+            <h4 class="title">Afif Makarim</h4>
+            <p class="description">Javascript Developer</p>
+        </div>
+    </div>
+    <div class="owl-carousel owl-theme">
+        <div class="item"><img src="https://www.w3schools.com/css/img_fjords.jpg" alt=""></div>
+        <div class="item"><img src="https://www.w3schools.com/css/img_fjords.jpg" alt=""></div>
+        <div class="item"><img src="https://www.w3schools.com/css/img_fjords.jpg" alt=""></div>
+        <div class="item"><img src="https://www.w3schools.com/css/img_fjords.jpg" alt=""></div>
+        <div class="item"><img src="https://www.w3schools.com/css/img_fjords.jpg" alt=""></div>
+        <div class="item"><img src="https://www.w3schools.com/css/img_fjords.jpg" alt=""></div>
+        <div class="item"><img src="https://www.w3schools.com/css/img_fjords.jpg" alt=""></div>
+        <div class="item"><img src="https://www.w3schools.com/css/img_fjords.jpg" alt=""></div>
+        <div class="item"><img src="https://www.w3schools.com/css/img_fjords.jpg" alt=""></div>
+        <div class="item"><img src="https://www.w3schools.com/css/img_fjords.jpg" alt=""></div>
+        <div class="item"><img src="https://www.w3schools.com/css/img_fjords.jpg" alt=""></div>
+    </div>
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
+    <script>
+        $('.owl-carousel').owlCarousel({
+    rtl:false,
+    loop:true,
+    margin:4,
+    nav:false,
+    autoplay:true,
+    responsive:{
+        500:{
+            items:1
+        },
+        600:{
+            items:2
+        },
+        1000:{
+            items:4
+        }
+    }
+})
+    </script>
+    </body>
+    
+    <style>
+        .card {
+            border: 1px solid #111;
+            border-radius: 25px;
+            width: 200px;
+
+        }
+    </style>
+  </html>

@@ -1,10 +1,23 @@
+@font-face {
+    font-family: "Futurab";
+    src: local("Futurab"), url("./FUTURAB.TTF") format("truetype");
+  }
+
+  .navbar-brand {
+    font-family: "Futurab";
+    color: "#736356 !important";
+  }
+
+  .navbar-light .navbar-brand {
+    color: #736356 !important;
+  }
+
 .grid-container {
     margin: auto;
     display: grid;
     grid-template-areas: "tron1 tron2";
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
-
     margin-bottom: 25px;
 }
 
@@ -26,6 +39,7 @@
 button.btn.btn-custom {
     color: #fff;
     background-color: #7F594E;
+    border-radius: 25px;
     border-color: #7F594E;
 }
 
@@ -45,7 +59,6 @@ button.btn.btn-custom {
     grid-area: featured-sp-1;
     display: flex;
     border-radius: 25px;
-    height: 150px;
 }
 
 .featured-landscape-2:hover, .featured-landscape-1:hover {
@@ -63,19 +76,29 @@ button.btn.btn-custom {
     display: flex;
     flex: 1.5;
     border-radius: 25px;
-    height: 150px;
 }
 
 .featured-1 {
     grid-area: featured-1;
     display: flex;
-    height: 330px
+    position: relative;
 }
 
 .featured-2 {
     grid-area: featured-2;
     display: flex;
-    height: 330px
+    position: relative;
+}
+
+.featured-2 .wrapper{
+    position: absolute;
+    padding: 50px 20px;
+    height: auto;
+    width: 100%;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
 }
 
 .featured-landscape-2 .wrapper, .featured-landscape-1 .wrapper {
@@ -93,16 +116,29 @@ button.btn.btn-custom {
 }
 
 /* Product */
+.overlay {
+    position: absolute;
+    right: 0;
+    background: #7f594e;
+    color: #f1f1f1;
+    padding: 10px;
+    border-radius: 0px 25px 0px 25px;
+    font-size: 20px;
+    text-align: center;
+}
+
 .product-grid {
     margin: auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 30px;
+    gap: 20px;
 }
 
 .product-list {
     position: relative;
     display: flex;
+    object-fit: cover;
+    border-radius: 25px;
 }
 
 .product-list .wrapper {
@@ -113,4 +149,196 @@ button.btn.btn-custom {
 
 .product-list .wrapper .title, .product-list .wrapper .desc{
     color: #ffff;
+}
+
+.image-overlay::after{
+  content:'';
+  position:absolute;
+  left:0; top:0;
+  border-radius: 25px;
+  width:100%; height:100%;
+  display:inline-block;
+  background: linear-gradient(145.98deg, rgba(255, 255, 255, 0) 2.3%, rgba(0, 0, 0, 0.18) 51.09%);
+}
+
+.product-list:hover {
+    filter: drop-shadow(5px 4px 10px rgba(0, 0, 0, 0.25));
+    transition: .5s ease;
+    cursor: pointer;
+}
+
+
+
+/* Reviews */
+.card-custom {
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-custom img {
+    border-radius: 50%;
+  }
+
+  .card-custom .wrapper {
+    padding: 25px;
+    background: rgb(44,134,59);
+    background: linear-gradient(90deg, rgba(44,134,59,1) 0%, rgba(130,162,115,1) 100%, rgba(12,143,12,1) 100%);  
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center; 
+}
+
+.svg-color {
+    fill: #ccc;
+}
+
+.card-custom .wrapper p, .card-custom .wrapper h4 {
+   color: #fff;  
+}
+
+.testimoni {
+    padding: 25px;
+    border: 1px solid #ccc;
+    border-radius: 25px 25px 0px 0px;
+}
+
+.grid-review {
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 15px;
+}
+
+footer {
+    border-top: 1px solid rgba(207, 207, 207, 0.62);
+    height: 80px;
+    display: flex;
+    align-items: center;
+
+    margin-top: 25px;
+}
+
+.footer-content {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+}
+@media (max-width: 1024px) {
+
+}
+
+@media (max-width: 768px) {
+
+    /* Featured */
+    .featured-grid {
+        margin: auto;
+        display: grid;
+        grid-template-areas: "featured-sp-1 featured-sp-1"
+                            "featured-sp-2 featured-sp-2"
+                            "featured-1 featured-2";
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+    
+    .featured-landscape-1 {
+        grid-area: featured-sp-1;
+        display: flex;
+        border-radius: 25px;
+        height: 150px;
+    }
+    
+    .featured-landscape-2:hover, .featured-landscape-1:hover {
+        cursor: pointer;
+        transition: 0.5s;
+        box-shadow: 5px 4px 10px rgba(0, 0, 0, 0.25);
+    }
+    
+    .featured-landscape-image {
+        border-radius: 25px;
+    }
+    
+    .featured-landscape-2 {
+        grid-area: featured-sp-2;
+        display: flex;
+        flex: 1.5;
+        border-radius: 25px;
+        height: 150px;
+    }
+    
+    .featured-1 {
+        grid-area: featured-1;
+        display: flex;
+        height: auto
+    }
+    
+    .featured-2 {
+        grid-area: featured-2;
+        display: flex;
+        height: auto
+    }
+    
+    .featured-landscape-2 .wrapper, .featured-landscape-1 .wrapper {
+        position: absolute;
+        padding: 25px;
+    }
+    
+    .wrapper .title {
+        font-weight: bold;
+    }
+    
+    .wrapper .desc {
+        font-weight: lighter;
+        margin-left: 20px;
+    }
+
+    /* Reviews */
+    .grid-review {
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .product-list .wrapper .title, .product-list .wrapper .desc {
+        font-size: 10pt;
+    }
+}
+
+@media (max-width: 500px){
+    .grid-container {
+        margin: auto;
+        display: grid;
+        grid-template-areas: "tron1";
+        grid-template-columns: 1fr;
+        margin-bottom: 25px;
+    }
+    
+    .tron_1 {
+        grid-area: tron1;
+        padding: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .tron_2 {
+        grid-area: tron2;
+        display: none;
+        background-color: firebrick;
+        justify-content: flex-end;
+    }
+
+    .product-list .wrapper .title, .product-list .wrapper .desc {
+        font-size: 8pt;
+    }
+
+    .overlay {
+        font-size: 8pt;
+    }
+
+    .featured-2 .wrapper{
+        padding: 20px;
+    }
 }
